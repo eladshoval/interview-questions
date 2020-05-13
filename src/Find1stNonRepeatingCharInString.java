@@ -26,12 +26,13 @@ public class Find1stNonRepeatingCharInString {
 
         for (int i = 0; i < str.length(); i++) {
             Integer charAsInt = (Integer) new Integer(str.charAt(i));
-            if (chars.get(charAsInt) == null) {
-                Entry e = new Entry();
+            Entry e = chars.get(charAsInt);
+            if (e == null) {
+                e = new Entry();
                 e.amount = 0;
                 chars.put(charAsInt ,e);
             }
-            Entry e = chars.get(charAsInt);
+
             e.amount = e.amount + 1;
             e.index = i;
         }
@@ -41,7 +42,8 @@ public class Find1stNonRepeatingCharInString {
             retIndex = -1;
 //        try {
             chars.forEach((k, v) -> {
-                if (v.amount == 1) {
+                if (v.amount == 1 &&  // appeared only once
+                        retIndex == -1) {  // get the first one
                     retIndex = v.index;
 //                    throw new MyExcpetion(v.index);
                 }
