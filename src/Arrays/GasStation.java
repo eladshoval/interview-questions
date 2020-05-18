@@ -1,3 +1,5 @@
+package Arrays;
+
 public class GasStation {
 
 
@@ -14,8 +16,7 @@ public class GasStation {
                     j = a.length; // invalidate j
                     break;
                 }
-            }
-            while (j != i);
+            } while (j != i);
 
             if (j == i) {
                 return i;

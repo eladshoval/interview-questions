@@ -1,3 +1,5 @@
+package Strings;
+
 import java.util.LinkedHashMap;
 
 public class Find1stNonRepeatingCharInString {

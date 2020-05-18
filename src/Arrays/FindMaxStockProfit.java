@@ -1,11 +1,13 @@
+package Arrays;
+
 import org.junit.Test;
 import org.junit.runner.JUnitCore;
 import org.junit.runner.Result;
 import org.junit.runner.notification.Failure;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
-public class FIndMaxStockProfit {
+public class FindMaxStockProfit {
 
     // {10, 7, 5, 9, 4, 7, 12}
 
@@ -85,7 +87,7 @@ public class FIndMaxStockProfit {
     }
 
     public static void main(String[] args) {
-        Result result = JUnitCore.runClasses(FIndMaxStockProfit.class);
+        Result result = JUnitCore.runClasses(FindMaxStockProfit.class);
         for (Failure failure : result.getFailures()) {
             System.out.println(failure.toString());
         }
